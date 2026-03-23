@@ -23,40 +23,42 @@ import {
 
 import { Link } from '@/lib/router';
 import { products, categories } from '@/data/products';
+import MainHeroSlider from './MainHeroSlider';
 
 // --- Homepage Specific Components ---
 
 const Hero = () => (
-  <section className="min-h-[calc(100vh-110px)] flex items-center px-[5%] pt-[30px]">
-    <div className="grid lg:grid-cols-2 items-center gap-[50px] w-full">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="max-w-[500px]"
-      >
-        <h1 className="text-[48px] lg:text-[64px] font-bold leading-[1.05] tracking-tight">Sculpting Personal Spaces.</h1>
-        <p className="text-[18px] text-muted font-semibold mt-3.5 mb-[26px] max-w-[44ch]">Minimalist furniture designed for the modern home, blending sculptural forms with everyday functionality.</p>
-        <button className="bg-primary text-white px-8 h-12 rounded-full text-[14px] font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all">Explore Collection</button>
-      </motion.div>
+  // <section className="min-h-[calc(100vh-110px)] flex items-center px-[5%] pt-[30px]">
+  //   <div className="grid lg:grid-cols-2 items-center gap-[50px] w-full">
+  //     <motion.div
+  //       initial={{ opacity: 0, y: 30 }}
+  //       whileInView={{ opacity: 1, y: 0 }}
+  //       viewport={{ once: true }}
+  //       transition={{ duration: 0.8 }}
+  //       className="max-w-[500px]"
+  //     >
+  //       <h1 className="text-[48px] lg:text-[64px] font-bold leading-[1.05] tracking-tight">Sculpting Personal Spaces.</h1>
+  //       <p className="text-[18px] text-muted font-semibold mt-3.5 mb-[26px] max-w-[44ch]">Minimalist furniture designed for the modern home, blending sculptural forms with everyday functionality.</p>
+  //       <button className="bg-primary text-white px-8 h-12 rounded-full text-[14px] font-semibold uppercase tracking-wider hover:bg-primary/90 transition-all">Explore Collection</button>
+  //     </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="relative"
-      >
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1600" alt="Interior" className="w-full h-[460px] lg:h-[600px] object-cover rounded-lg border border-border shadow-2xl" />
-        <div className="absolute -bottom-6 lg:-bottom-[30px] -left-0 lg:-left-[30px] bg-surface p-6 lg:p-[34px] rounded-lg shadow-2xl border border-border">
-          <small className="text-secondary font-black tracking-[2px] uppercase">NEW ARRIVAL</small>
-          <h3 className="font-heading text-[24px] font-extrabold mt-1.5">The Archi Sofa</h3>
-          <p className="text-sm font-bold mt-1 text-muted">Starting at ₹1,200</p>
-        </div>
-      </motion.div>
-    </div>
-  </section>
+  //     <motion.div
+  //       initial={{ opacity: 0, scale: 0.95 }}
+  //       whileInView={{ opacity: 1, scale: 1 }}
+  //       viewport={{ once: true }}
+  //       transition={{ duration: 0.8 }}
+  //       className="relative"
+  //     >
+  //       <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1600" alt="Interior" className="w-full h-[460px] lg:h-[600px] object-cover rounded-lg border border-border shadow-2xl" />
+  //       <div className="absolute -bottom-6 lg:-bottom-[30px] -left-0 lg:-left-[30px] bg-surface p-6 lg:p-[34px] rounded-lg shadow-2xl border border-border">
+  //         <small className="text-secondary font-black tracking-[2px] uppercase">NEW ARRIVAL</small>
+  //         <h3 className="font-heading text-[24px] font-extrabold mt-1.5">The Archi Sofa</h3>
+  //         <p className="text-sm font-bold mt-1 text-muted">Starting at ₹1,200</p>
+  //       </div>
+  //     </motion.div>
+  //   </div>
+  // </section>
+  <MainHeroSlider/>
 );
 
 const USP = () => (
