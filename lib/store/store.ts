@@ -5,10 +5,13 @@ import adminCategoriesReducer from './features/adminCategoriesSlice';
 import adminAttributesReducer from './features/adminAttributesSlice';
 import adminVariantsReducer from './features/adminVariantsSlice';
 import adminOrdersReducer from './features/adminOrdersSlice';
-
+import pagesReducer from './pages/pagesSlice';
+import commentsReducer from './comments/commentSlice';
 export const makeStore = () => {
   return configureStore({
     reducer: {
+      pages: pagesReducer,
+      comments: commentsReducer,
       cart: cartReducer,
       adminProducts: adminProductsReducer,
       adminCategories: adminCategoriesReducer,
